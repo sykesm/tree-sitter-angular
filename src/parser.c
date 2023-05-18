@@ -5,7 +5,7 @@
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
-#define LANGUAGE_VERSION 11
+#define LANGUAGE_VERSION 14
 #define STATE_COUNT 252
 #define LARGE_STATE_COUNT 2
 #define SYMBOL_COUNT 73
@@ -14,6 +14,7 @@
 #define EXTERNAL_TOKEN_COUNT 0
 #define FIELD_COUNT 12
 #define MAX_ALIAS_SEQUENCE_LENGTH 4
+#define PRODUCTION_ID_COUNT 15
 
 enum {
   anon_sym_LPAREN = 1,
@@ -90,7 +91,7 @@ enum {
   aux_sym_structural_declaration_repeat1 = 72,
 };
 
-static const char *ts_symbol_names[] = {
+static const char * const ts_symbol_names[] = {
   [ts_builtin_sym_end] = "end",
   [anon_sym_LPAREN] = "(",
   [anon_sym_RPAREN] = ")",
@@ -101,7 +102,7 @@ static const char *ts_symbol_names[] = {
   [anon_sym_COLON] = ":",
   [anon_sym_PIPE] = "|",
   [anon_sym_DOT] = ".",
-  [anon_sym_QMARK_DOT] = "?.",
+  [anon_sym_QMARK_DOT] = "\?.",
   [anon_sym_BANG_DOT] = "!.",
   [anon_sym_COMMA] = ",",
   [sym__single_quote] = "_single_quote",
@@ -166,7 +167,7 @@ static const char *ts_symbol_names[] = {
   [aux_sym_structural_declaration_repeat1] = "structural_declaration_repeat1",
 };
 
-static TSSymbol ts_symbol_map[] = {
+static const TSSymbol ts_symbol_map[] = {
   [ts_builtin_sym_end] = ts_builtin_sym_end,
   [anon_sym_LPAREN] = anon_sym_LPAREN,
   [anon_sym_RPAREN] = anon_sym_RPAREN,
@@ -552,7 +553,7 @@ enum {
   field_value = 12,
 };
 
-static const char *ts_field_names[] = {
+static const char * const ts_field_names[] = {
   [0] = NULL,
   [field_alias] = "alias",
   [field_arguments] = "arguments",
@@ -568,7 +569,7 @@ static const char *ts_field_names[] = {
   [field_value] = "value",
 };
 
-static const TSFieldMapSlice ts_field_map_slices[15] = {
+static const TSFieldMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
   [1] = {.index = 0, .length = 1},
   [2] = {.index = 1, .length = 1},
   [3] = {.index = 2, .length = 2},
@@ -630,8 +631,267 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_value, 2},
 };
 
-static TSSymbol ts_alias_sequences[15][MAX_ALIAS_SEQUENCE_LENGTH] = {
+static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
   [0] = {0},
+};
+
+static const uint16_t ts_non_terminal_alias_map[] = {
+  0,
+};
+
+static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
+  [0] = 0,
+  [1] = 1,
+  [2] = 2,
+  [3] = 3,
+  [4] = 4,
+  [5] = 5,
+  [6] = 6,
+  [7] = 7,
+  [8] = 8,
+  [9] = 9,
+  [10] = 10,
+  [11] = 11,
+  [12] = 12,
+  [13] = 13,
+  [14] = 14,
+  [15] = 15,
+  [16] = 16,
+  [17] = 8,
+  [18] = 14,
+  [19] = 19,
+  [20] = 6,
+  [21] = 2,
+  [22] = 4,
+  [23] = 5,
+  [24] = 9,
+  [25] = 11,
+  [26] = 10,
+  [27] = 3,
+  [28] = 12,
+  [29] = 7,
+  [30] = 30,
+  [31] = 31,
+  [32] = 31,
+  [33] = 33,
+  [34] = 34,
+  [35] = 34,
+  [36] = 31,
+  [37] = 37,
+  [38] = 30,
+  [39] = 30,
+  [40] = 34,
+  [41] = 41,
+  [42] = 31,
+  [43] = 30,
+  [44] = 31,
+  [45] = 30,
+  [46] = 34,
+  [47] = 34,
+  [48] = 31,
+  [49] = 30,
+  [50] = 33,
+  [51] = 33,
+  [52] = 33,
+  [53] = 33,
+  [54] = 33,
+  [55] = 34,
+  [56] = 56,
+  [57] = 4,
+  [58] = 3,
+  [59] = 12,
+  [60] = 7,
+  [61] = 14,
+  [62] = 62,
+  [63] = 5,
+  [64] = 64,
+  [65] = 10,
+  [66] = 2,
+  [67] = 67,
+  [68] = 11,
+  [69] = 9,
+  [70] = 6,
+  [71] = 71,
+  [72] = 72,
+  [73] = 56,
+  [74] = 64,
+  [75] = 75,
+  [76] = 6,
+  [77] = 77,
+  [78] = 78,
+  [79] = 78,
+  [80] = 3,
+  [81] = 11,
+  [82] = 2,
+  [83] = 10,
+  [84] = 5,
+  [85] = 9,
+  [86] = 12,
+  [87] = 7,
+  [88] = 14,
+  [89] = 89,
+  [90] = 4,
+  [91] = 78,
+  [92] = 67,
+  [93] = 78,
+  [94] = 94,
+  [95] = 56,
+  [96] = 96,
+  [97] = 6,
+  [98] = 67,
+  [99] = 99,
+  [100] = 100,
+  [101] = 101,
+  [102] = 71,
+  [103] = 103,
+  [104] = 64,
+  [105] = 101,
+  [106] = 7,
+  [107] = 12,
+  [108] = 72,
+  [109] = 3,
+  [110] = 100,
+  [111] = 101,
+  [112] = 101,
+  [113] = 14,
+  [114] = 9,
+  [115] = 11,
+  [116] = 2,
+  [117] = 10,
+  [118] = 118,
+  [119] = 101,
+  [120] = 5,
+  [121] = 4,
+  [122] = 122,
+  [123] = 103,
+  [124] = 72,
+  [125] = 125,
+  [126] = 71,
+  [127] = 127,
+  [128] = 128,
+  [129] = 118,
+  [130] = 130,
+  [131] = 77,
+  [132] = 132,
+  [133] = 133,
+  [134] = 89,
+  [135] = 135,
+  [136] = 130,
+  [137] = 137,
+  [138] = 138,
+  [139] = 139,
+  [140] = 77,
+  [141] = 89,
+  [142] = 14,
+  [143] = 118,
+  [144] = 144,
+  [145] = 56,
+  [146] = 103,
+  [147] = 138,
+  [148] = 7,
+  [149] = 12,
+  [150] = 3,
+  [151] = 6,
+  [152] = 9,
+  [153] = 11,
+  [154] = 2,
+  [155] = 10,
+  [156] = 5,
+  [157] = 4,
+  [158] = 64,
+  [159] = 67,
+  [160] = 130,
+  [161] = 72,
+  [162] = 71,
+  [163] = 56,
+  [164] = 14,
+  [165] = 165,
+  [166] = 64,
+  [167] = 167,
+  [168] = 168,
+  [169] = 169,
+  [170] = 168,
+  [171] = 167,
+  [172] = 168,
+  [173] = 168,
+  [174] = 167,
+  [175] = 168,
+  [176] = 167,
+  [177] = 167,
+  [178] = 167,
+  [179] = 168,
+  [180] = 67,
+  [181] = 71,
+  [182] = 89,
+  [183] = 77,
+  [184] = 72,
+  [185] = 128,
+  [186] = 118,
+  [187] = 103,
+  [188] = 188,
+  [189] = 189,
+  [190] = 138,
+  [191] = 130,
+  [192] = 77,
+  [193] = 89,
+  [194] = 194,
+  [195] = 195,
+  [196] = 196,
+  [197] = 194,
+  [198] = 195,
+  [199] = 199,
+  [200] = 200,
+  [201] = 194,
+  [202] = 196,
+  [203] = 203,
+  [204] = 199,
+  [205] = 205,
+  [206] = 196,
+  [207] = 194,
+  [208] = 196,
+  [209] = 194,
+  [210] = 210,
+  [211] = 196,
+  [212] = 195,
+  [213] = 199,
+  [214] = 195,
+  [215] = 199,
+  [216] = 195,
+  [217] = 199,
+  [218] = 199,
+  [219] = 195,
+  [220] = 220,
+  [221] = 194,
+  [222] = 196,
+  [223] = 223,
+  [224] = 223,
+  [225] = 225,
+  [226] = 226,
+  [227] = 223,
+  [228] = 223,
+  [229] = 223,
+  [230] = 230,
+  [231] = 231,
+  [232] = 232,
+  [233] = 231,
+  [234] = 234,
+  [235] = 234,
+  [236] = 231,
+  [237] = 234,
+  [238] = 234,
+  [239] = 232,
+  [240] = 234,
+  [241] = 232,
+  [242] = 232,
+  [243] = 243,
+  [244] = 244,
+  [245] = 234,
+  [246] = 246,
+  [247] = 231,
+  [248] = 231,
+  [249] = 232,
+  [250] = 231,
+  [251] = 232,
 };
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
@@ -1068,7 +1328,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   }
 }
 
-static TSLexMode ts_lex_modes[STATE_COUNT] = {
+static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [0] = {.lex_state = 0},
   [1] = {.lex_state = 12},
   [2] = {.lex_state = 11},
@@ -1323,7 +1583,7 @@ static TSLexMode ts_lex_modes[STATE_COUNT] = {
   [251] = {.lex_state = 0},
 };
 
-static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
+static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [0] = {
     [ts_builtin_sym_end] = ACTIONS(1),
     [anon_sym_LPAREN] = ACTIONS(1),
@@ -1394,7 +1654,7 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
 };
 
-static uint16_t ts_small_parse_table[] = {
+static const uint16_t ts_small_parse_table[] = {
   [0] = 2,
     ACTIONS(25), 10,
       anon_sym_PIPE,
@@ -5697,7 +5957,7 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_RPAREN,
 };
 
-static uint32_t ts_small_parse_table_map[] = {
+static const uint32_t ts_small_parse_table_map[] = {
   [SMALL_STATE(2)] = 0,
   [SMALL_STATE(3)] = 37,
   [SMALL_STATE(4)] = 74,
@@ -5950,7 +6210,7 @@ static uint32_t ts_small_parse_table_map[] = {
   [SMALL_STATE(251)] = 5317,
 };
 
-static TSParseActionEntry ts_parse_actions[] = {
+static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
   [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_program, 0),
@@ -6249,28 +6509,32 @@ extern "C" {
 #endif
 
 extern const TSLanguage *tree_sitter_angular(void) {
-  static TSLanguage language = {
+  static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,
     .alias_count = ALIAS_COUNT,
     .token_count = TOKEN_COUNT,
-    .large_state_count = LARGE_STATE_COUNT,
-    .symbol_metadata = ts_symbol_metadata,
-    .parse_table = (const unsigned short *)ts_parse_table,
-    .small_parse_table = (const uint16_t *)ts_small_parse_table,
-    .small_parse_table_map = (const uint32_t *)ts_small_parse_table_map,
-    .parse_actions = ts_parse_actions,
-    .lex_modes = ts_lex_modes,
-    .symbol_names = ts_symbol_names,
-    .public_symbol_map = ts_symbol_map,
-    .alias_sequences = (const TSSymbol *)ts_alias_sequences,
-    .field_count = FIELD_COUNT,
-    .field_names = ts_field_names,
-    .field_map_slices = (const TSFieldMapSlice *)ts_field_map_slices,
-    .field_map_entries = (const TSFieldMapEntry *)ts_field_map_entries,
-    .max_alias_sequence_length = MAX_ALIAS_SEQUENCE_LENGTH,
-    .lex_fn = ts_lex,
     .external_token_count = EXTERNAL_TOKEN_COUNT,
+    .state_count = STATE_COUNT,
+    .large_state_count = LARGE_STATE_COUNT,
+    .production_id_count = PRODUCTION_ID_COUNT,
+    .field_count = FIELD_COUNT,
+    .max_alias_sequence_length = MAX_ALIAS_SEQUENCE_LENGTH,
+    .parse_table = &ts_parse_table[0][0],
+    .small_parse_table = ts_small_parse_table,
+    .small_parse_table_map = ts_small_parse_table_map,
+    .parse_actions = ts_parse_actions,
+    .symbol_names = ts_symbol_names,
+    .field_names = ts_field_names,
+    .field_map_slices = ts_field_map_slices,
+    .field_map_entries = ts_field_map_entries,
+    .symbol_metadata = ts_symbol_metadata,
+    .public_symbol_map = ts_symbol_map,
+    .alias_map = ts_non_terminal_alias_map,
+    .alias_sequences = &ts_alias_sequences[0][0],
+    .lex_modes = ts_lex_modes,
+    .lex_fn = ts_lex,
+    .primary_state_ids = ts_primary_state_ids,
   };
   return &language;
 }
